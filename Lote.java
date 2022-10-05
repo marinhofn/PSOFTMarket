@@ -40,5 +40,20 @@ public class Lote {
         return produto.getNome() + ", $ " + String.format("%.2f", produto.getPreco()) + ", " + quantidade + " unidades, Total: $ " + String.format("%.2f", produto.getPreco() * quantidade);
     }
 
+	public void adicionarProduto(Produto produto) {
+        if (this.produto.getNome().equals(produto.getNome())) {
+            this.quantidade++;
+        }
+        
+	}
+
+    public void adicionarProdutos(Produto produto, int quantidade) {
+        if (this.produto.getNome().equals(produto.getNome())) {
+            this.quantidade += quantidade;
+        }
+        
+	}
+    
+
     
 }
