@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class RepositorioLotes {
 
-    ArrayList<Lote> lotes = new ArrayList<Lote>();
+    private ArrayList<Lote> lotes = new ArrayList<Lote>();
 
     public void adicionarLote(Lote lote) {
         lotes.add(lote);

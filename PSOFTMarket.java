@@ -3,43 +3,22 @@ import java.util.Date;
 public class PSOFTMarket {
 
     public static void main(String[] args) {
+
+        Fachada f = new Fachada();
         
-        Produto teste1 = Fachada.criarProduto("Maizena", "Sao Braz", 7.50, new Date());
+        Produto produto1 = f.criarProduto("Maizena", "Sao Braz", 7.50, new Date());
 
-        Produto teste2 = Fachada.criarProduto("Cafe", "Sao Braz", 7.50, new Date());
-        
+        Produto produto2 = f.criarProduto("Cafe", "Sao Braz", 7.50, new Date());      
 
+        f.criarLote(10, new Date(), produto1);
 
-        Lote loteTeste1 = Fachada.criarLote(10, new Date(), teste1);
+        f.criarLote(10, new Date(), produto2);
 
-        Lote loteTeste2 = Fachada.criarLote(10, new Date(), teste2);
-
-        System.out.println("Listando todos os lotes:");
+        System.out.println(" \nListando todos os lotes:");
         Fachada.listarLotes();
-        System.out.println("Listando todos os produtos:");
+        System.out.println(" \nListando todos os produtos:");
         Fachada.listarProdutos();
 
-        
-
-
-
-
-
-        // // Criando Produto
-        // Produto produto = new Produto("Maizena", "Sao Braz", 7.50, new Date());
-        
-        // // Criando Lote
-        // Lote lote = new Lote(10, new Date(), new Produto("Arroz Branco", "Sao Braz", 2.50, new Date()));
-        
-        // // Adicionar produto ao lote
-        // lote.adicionarProduto(produto);
-        // // Adicionar determinada quantidade de produtos ao lote
-        // lote.adicionarProdutos(produto, 15);
-
-        
-        // System.out.println(lote.toString());
-
-        
     }
 
 }
